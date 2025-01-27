@@ -54,7 +54,7 @@ jobs:
         run: terraform plan
         working-directory: ${{ env.WORK_DIR }}
 
-      # Step 8: Terraform Apply (if push event)
+      # Step 8: Terraform Apply EXECUTION(if push event)
       - name: Terraform Apply
         if: github.event_name == 'push'
         run: terraform apply
